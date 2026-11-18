@@ -7,10 +7,6 @@
 <link rel="icon" href="img/tildafavicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-<script>
-  // Телефонда немесе тар экранда — бірден негізгі сайтқа
-  if (window.innerWidth < 760) location.replace('index.html' + location.hash);
-</script>
 <style>
   :root {
     --purple: #6a1fd6;
@@ -96,6 +92,12 @@
   }
   @media (max-width: 1000px) {
     .side { display: none; }
+  }
+  /* Тар экранда терезесіз, толық экран */
+  @media (max-width: 759px) {
+    body { padding: 0; }
+    .phone { width: 100vw; height: 100vh; border-radius: 0; padding: 0; box-shadow: none; background: #fff; }
+    .phone iframe { border-radius: 0; }
   }
 </style>
 </head>
