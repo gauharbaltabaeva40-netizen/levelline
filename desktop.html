@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LEVEL LINE</title>
+<link rel="icon" href="img/tildafavicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<script>
+  // Телефонда немесе тар экранда — бірден негізгі сайтқа
+  if (window.innerWidth < 760) location.replace('index.html' + location.hash);
+</script>
+<style>
+  :root {
+    --purple: #6a1fd6;
+    --purple-2: #9b5cff;
+    --ink: #1d1530;
+    --muted: #6b6480;
+    --bg: #f6f2ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 15% 20%, rgba(155, 92, 255, .25), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(106, 31, 214, .22), transparent 45%),
+      var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 72px;
+    padding: 24px 40px;
+    overflow: hidden;
+  }
+  .side {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .logo span { font-size: 11px; letter-spacing: 9px; color: var(--ink); margin-top: 4px; padding-left: 2px; }
+  .side h1 {
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -.5px;
+  }
+  .side h1 span { color: var(--purple); }
+  .side p { font-size: 17px; line-height: 1.5; color: var(--muted); }
+  .cta {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--purple), var(--purple-2));
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(106, 31, 214, .35);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(106, 31, 214, .45); }
+  .hint { font-size: 13px; color: var(--muted); }
+  .phone {
+    flex: none;
+    width: 420px;
+    height: min(880px, calc(100vh - 48px));
+    border-radius: 44px;
+    padding: 12px;
+    background: #15101f;
+    box-shadow: 0 40px 80px rgba(29, 21, 48, .28), inset 0 0 0 2px #2c2440;
+  }
+  .phone iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 34px;
+    background: #fff;
+    display: block;
+  }
+  @media (max-width: 1000px) {
+    .side { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="side">
+    <div class="logo">LEVEL<span>LINE</span></div>
+    <h1>4 айда 0-ден бастап <span>еркін сөйле!</span></h1>
+    <p>Нәтиже көрмесең, тегін оқытамыз. Сайт телефонға арналған — оңдағы терезеде айналдырып көріңіз.</p>
+    <a class="cta" href="https://api.whatsapp.com/send/?phone=77004537501&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">WhatsApp-қа жазу →</a>
+    <span class="hint">Телефоннан ашсаңыз, сайт толық экранда көрінеді.</span>
+  </div>
+  <div class="phone">
+    <iframe src="index.html" title="LEVEL LINE"></iframe>
+  </div>
+  <script>
+    // Хэш сілтеме (#rec...) болса, ішкі сайтқа береміз
+    if (location.hash) document.querySelector('iframe').src = 'index.html' + location.hash;
+  </script>
+</body>
+</html>
